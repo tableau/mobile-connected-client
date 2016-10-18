@@ -448,6 +448,17 @@ static NSString *service = @"Tableau.OAuth";
 - (void) addCookie:(NSString *)cookieValue forIdentifier:(NSString *)cookieName forDuration:(NSTimeInterval) duration{
     NSMutableDictionary *cookieProperties = [NSMutableDictionary dictionary];
     
+    if (cookieName == nil) {
+        NSLog(@"addCookie: Can't add a cookie with a blank name.");
+        return;
+    }
+    
+    if (cookieValue == nil) {
+        NSLog(@"addCookie: Deleting blank cookie: %@", cookieName);
+        [self deleteCookie: cookieName];
+        return;
+    }
+
     // Set the properties for the cookie.
     [cookieProperties setObject:cookieName forKey:NSHTTPCookieName];
     [cookieProperties setObject:cookieValue forKey:NSHTTPCookieValue];
@@ -460,6 +471,22 @@ static NSString *service = @"Tableau.OAuth";
     // Add the cookie to the cookie storage.
     NSHTTPCookie *cookie = [NSHTTPCookie cookieWithProperties:cookieProperties];
     [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
+}
+
+/**
+ Deletes cookies with the given name for the current server host.
+ @param cookieName
+ The name of the cookie to delete.
+ */
+- (void) deleteCookie:(NSString *)cookieName {
+    NSHTTPCookie *cookie;
+    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    for (cookie in [storage cookies])
+    {
+        if ([cookie.domain isEqualToString:server.host] && [cookie.name isEqualToString:cookieName]) {
+            [storage deleteCookie:cookie];
+        }
+    }
 }
 
 /**
