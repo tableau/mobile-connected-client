@@ -9,7 +9,7 @@ As a plugin, it preforms three authentication related tasks:
     <li> Sign out the user. <pre>TableauOAuth.signOut()</pre></li>
 </ol>
 
-<h2> Check Sign In Flow: </h2>
+<h2>Check Sign In Flow:</h2>
 <pre>
                      checkSignInStatus
                             |
