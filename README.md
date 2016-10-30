@@ -3,7 +3,8 @@
 The Connected Client Plugin is an Objective-C library written to accompany the [Mobile App Bootstrap](https://github.com/tableau/mobile-app-bootstrap), 
 but is also useful as a stand-alone class. It helps authenticate a user and keep them signed in using long-lived tokens. It can be used in the sample [Mobile App Bootstrap](https://github.com/tableau/mobile-app-bootstrap) or in another native mobile app.
 
-As a plugin, it performs three authentication-related tasks:  
+As a plugin, it performs three authentication-related tasks:
+
 1. Check if user is signed in. This function should always be called before trying to load Tableau content.  
 `TableauOAuth.checkSignInStatus()`
 2. Manage long-lived tokens for a session. Long-lived tokens [must be enabled](https://onlinehelp.tableau.com/current/server/en-us/devices_connected_credentials.htm) on your server.  
