@@ -1,4 +1,5 @@
 # Mobile Connected Client Plugin
+[![Community Supported](https://img.shields.io/badge/Support%20Level-Community%20Supported-457387.svg)](https://www.tableau.com/support-levels-it-and-developer-tools)
 
 The Connected Client Plugin is an Objective-C library written to accompany the [Mobile App Bootstrap](https://github.com/tableau/mobile-app-bootstrap), 
 but is also useful as a stand-alone class. It helps authenticate a user and keep them signed in using long-lived tokens. It can be used in the sample [Mobile App Bootstrap](https://github.com/tableau/mobile-app-bootstrap) or in another native mobile app.
@@ -49,7 +50,7 @@ The plugin completes four main tasks in order to handle long-lived tokens.
 
 ## Support
 
-This collection is not officially 'blessed' by Tableau Engineering or Support. What does that mean? We didn't have a QA team test it. It's a tool for learning how to authenticate to Tableau Servers and stay signed-in using long-lived tokens. You should not expect that there are 0 bugs. If you have problems getting it to work, feel free to email us with questions, but we can't promise quick responses.
+This collection is community supported and not officially 'blessed' by Tableau Engineering or Support. What does that mean? We didn't have a QA team test it. It's a tool for learning how to authenticate to Tableau Servers and stay signed-in using long-lived tokens. You should not expect that there are 0 bugs. If you have problems getting it to work, feel free to email us with questions, but we can't promise quick responses.
 
 A standard disclaimer: mobile-connected-client is made available AS-IS with no support and no warranty whatsoever. Despite efforts to write good and useful code there may be bugs that cause unexpected and undesirable behavior. The software is strictly “use at your own risk.”
 The good news: This is intended to be a self-service tool. You are free to modify it in any way to meet your needs.
