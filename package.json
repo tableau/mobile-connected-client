@@ -1,0 +1,13 @@
+{
+  "name": "tableau-mobile-connected-client",
+  "version": "1.0.0",
+  "description": "A library for keeping a user signed in to a Tableau Server.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tableau/mobile-connected-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tableau/mobile-connected-client/issues"
+  },
+  "homepage": "https://github.com/tableau/mobile-connected-client"
+}
